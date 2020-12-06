@@ -8,10 +8,10 @@ import argparse
 def main(args):
 
     exts = ['png', 'jpg', 'gif', 'JPEG', 'webp', 'PNG' ]
-
+    print("Initializing preprocessor")
     preprocessor = get_std_preprocessor()
     images = get_all_images(args.in_path, exts)
-    
+    print("Initializing classifier")
     classifier = std_clf(model_type=args.model, preprocessor=preprocessor)
 
     classifier.process_images(images, args.out_path)

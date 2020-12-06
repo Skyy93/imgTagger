@@ -4,7 +4,7 @@ from PIL import Image
 from backend.utils import get_imagenet_class
 import os
 import shutil
-
+from tqdm import tqdm
 
 class std_clf:
     def __init__(self, model_type, preprocessor):
@@ -23,8 +23,9 @@ class std_clf:
         return model
 
     def process_images(self, files, out_path):
+        print('Processing images: ')
         with torch.no_grad():
-            for f in files:
+            for f in tqdm(files):
                 img = Image.open(f)
                 img = self.preprocessor(img).unsqueeze(0)
                 logits = self.model(img)
