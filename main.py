@@ -29,7 +29,7 @@ if __name__ == '__main__':
                         help=f'Output path of the sorted images'
                         )
     parser.add_argument('--model',
-                        choices=['resnet152', 'mobilenet_v2', 'resnet18'],
+                        choices=['resnet152', 'mobilenet_v2', 'resnet18', 'resnext101_32x8d'],
                         default='resnet152',
                         help=f'The pretrained backend model, resnet151 recommended due higher accuracy'
                         )

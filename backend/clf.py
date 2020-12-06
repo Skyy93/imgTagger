@@ -18,6 +18,8 @@ class std_clf:
             model = models.resnet18(pretrained=True)
         elif model_type == 'mobilenet_v2':
             model = models.mobilenet_v2(pretrained=True)
+        elif model_type == 'resnext101_32x8d':
+            model = models.resnext101_32x8d(pretrained=True)
         else:
             model = models.resnet152(pretrained=True)
         return model

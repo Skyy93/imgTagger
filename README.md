@@ -17,5 +17,5 @@ pip install -r requirements.txt
 | --------------------- |---------------------------------------------------------| --------------------------------|
 | --out\_path           | Output path of the sorted image                     	  | images                          |
 | --in\_path            | The path to the input image                     	      |   images\_sorted		              |
-| --model               | Choose a model for classifying your images, currently supported: resnet18 (smaller resnet), mobilenet\_v2 (very small and reliable), resnet152 (big with good results)                                 |   resnet152			    |
+| --model               | Choose a model for classifying your images, currently supported: resnet18 (smaller resnet), mobilenet\_v2 (very small and reliable), resnet152 (big with good results), resnext101\_32x8d (best top 1 acc)                                 |   resnet152			    |
 
